@@ -17,12 +17,12 @@ export default function GlobalError({
 
     return (
         <html>
-        <body className="h-screen w-screen bg-primary center flex-col">
-            <h2>Something went wrong!</h2>
+        <body className="h-screen w-screen bg-primary center gap-6 flex-col">
+            <h2 className="font-bold text-lg text-secondary">Something went wrong!</h2>
             <div className="center gap-6">
-                <button onClick={() => reset()}>Try again</button>
+                <button className="bg-transparent border border-secondary px-6 py-4 rounded-[25px] text-secondary text-sm" onClick={() => reset()}>Try again</button>
                 <Link href="/">
-                    <button>Back Home</button>
+                    <button className="px-6 py-4 rounded-[25px] text-sm text-black bg-secondary">Back Home</button>
                 </Link>
             </div>
         </body>
