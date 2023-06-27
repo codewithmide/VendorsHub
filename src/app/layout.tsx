@@ -1,5 +1,5 @@
 import './globals.css';
-import '../styles/fonts.css'
+import '../styles/fonts.css';
 
 export const metadata = {
   title: 'Vendors Hub',
@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='satoshi font-medium bg-primary text-grey'>{children}</body>
+      <body className='satoshi bg-primary text-white transition duration-300'>{children}</body>
     </html>
   )
 }
