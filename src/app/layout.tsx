@@ -1,11 +1,9 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import './globals.css';
+import '../styles/fonts.css'
 
 export const metadata = {
   title: 'Vendors Hub',
-  description: 'Resolve issues hiring vendors for your event.',
+  description: 'Resolve issues around hiring vendors for your event.',
 }
 
 export default function RootLayout({
@@ -15,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className='satoshi font-medium bg-primary text-grey'>{children}</body>
     </html>
   )
 }
