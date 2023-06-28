@@ -17,12 +17,14 @@ const Hero = () => {
                         <p className="text-md mb-6">
                             Register now to Hire qualified vendors who will deliver quality Jobs and put a smile on your Face
                         </p>
-                        <CustomButton 
-                            onClick={() => {}}
-                            padding="15px 50px"
-                            borderRadius="60px">
-                            About Us
-                        </CustomButton>
+                        <div>
+                            <CustomButton 
+                                onClick={() => {}}
+                                padding="15px 50px"
+                                borderRadius="60px">
+                                About Us
+                            </CustomButton>
+                        </div>
                     </div>
                 </div>
         </div>

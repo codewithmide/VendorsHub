@@ -4,28 +4,28 @@ import { CustomButtonTypes } from '@/types/commonTypes/button';
 interface CustomButtonProps extends CustomButtonTypes {}
 
 const CustomButton: React.FC<CustomButtonProps> = ({
-  outline,
+  border = 'none',
   onClick,
-  background,
-  textColor,
-  padding,
-  borderRadius,
-  cursor,
+  background = '#F5BD02',
+  textColor = '#1E1E1E',
+  padding = '10px 20px',
+  borderRadius = '20px',
+  cursor = 'pointer',
   children,
-  textSize,
+  textSize = '1rem',
 }) => {
   const buttonStyle = {
-    outline: outline || 'none',
-    background: background || '#F5BD02',
-    padding: padding || '10px 20px',
-    borderRadius: borderRadius || '20px',
-    cursor: cursor || 'pointer',
-    color: textColor || '#1E1E1E',
-    fontSize: textSize || '1rem',
+    border,
+    background,
+    padding,
+    borderRadius,
+    cursor,
+    color: textColor,
+    fontSize: textSize,
   };
 
   return (
-    <button className="center font-bold" onClick={onClick} style={buttonStyle}>
+    <button className="center border font-bold w-full" onClick={onClick} style={buttonStyle}>
       {children}
     </button>
   );

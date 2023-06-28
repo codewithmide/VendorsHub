@@ -15,7 +15,9 @@ const Navbar = () => {
                 <Link href='/'>About Us</Link>
                 <Link href='/'>Sign Up</Link>
                 <Link href='/'>Sign In</Link>
-                <CustomButton onClick={() => {}} background="#FFF" textColor="#1E1E1E" textSize=".8rem">Book Vendor</CustomButton>
+                <div>
+                    <CustomButton onClick={() => {}} background="#FFF" textColor="#1E1E1E" textSize=".8rem">Book Vendor</CustomButton>
+                </div>
             </div>
             <div className="border-[#FDFEF9] border center gap-1 p-1 cursor-pointer w-[4.5rem] rounded-[60px]">
                 <div className="">
