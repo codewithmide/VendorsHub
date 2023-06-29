@@ -6,7 +6,7 @@ import { FcNext } from 'react-icons/fc';
 
 const Categories = () => {
   return (
-    <div className="w-full mt-16 mb-6 py-2 center border-t-secondary border border-l-0 border-r-0 border-b-secondary">
+    <div className="w-full mt-8 mb-6 py-2 center border-t-secondary border border-l-0 border-r-0 border-b-secondary">
       <div className="w-[90%] flex gap-10 between">
         {categories.map((category, index) => (
           <div key={index} className="center flex-col gap-3">

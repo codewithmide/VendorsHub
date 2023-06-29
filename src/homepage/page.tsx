@@ -6,6 +6,7 @@ import Categories from "@/components/common/categories";
 import Listings from "./listings";
 import WhyUs from "./whyus";
 import Testimonial from "./testimonial";
+import Footer from "@/components/footer";
 
 const Homepage = () => {
     return (
@@ -16,6 +17,7 @@ const Homepage = () => {
             <Listings />
             <WhyUs />
             <Testimonial />
+            <Footer />
         </>
     );
 }

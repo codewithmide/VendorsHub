@@ -25,7 +25,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   };
 
   return (
-    <button className="center border font-bold w-full" onClick={onClick} style={buttonStyle}>
+    <button className="center border font-bold w-full hover:scale-95 transition duration-300" onClick={onClick} style={buttonStyle}>
       {children}
     </button>
   );

@@ -61,7 +61,9 @@ const Listings = () => {
             ))}
             <div className='w-full flex items-end justify-end'>
                 <div>
+                  <Link href='/vendorsListings'>
                     <CustomButton border='1px solid #F5BD02' textColor='#F5BD02' padding='8px 40px' background='#383838' onClick={() => {}}>See more</CustomButton>
+                  </Link>
                 </div>
             </div>
         </div>
