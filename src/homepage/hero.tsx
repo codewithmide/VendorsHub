@@ -1,3 +1,6 @@
+"use client";
+
+import Link from 'next/link'
 import CustomButton from "@/components/common/customButton";
 import React from "react";
 
@@ -18,12 +21,14 @@ const Hero = () => {
                             Register now to Hire qualified vendors who will deliver quality Jobs and put a smile on your Face
                         </p>
                         <div>
-                            <CustomButton 
-                                onClick={() => {}}
-                                padding="15px 50px"
-                                borderRadius="60px">
-                                About Us
-                            </CustomButton>
+                            <Link href="/about-us">
+                                <CustomButton 
+                                    onClick={() => {}}
+                                    padding="15px 50px"
+                                    borderRadius="60px">
+                                    About Us
+                                </CustomButton>
+                            </Link>
                         </div>
                     </div>
                 </div>

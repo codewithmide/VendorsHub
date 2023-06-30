@@ -12,7 +12,7 @@ const Navbar = () => {
             <Logo />
             <Search />
             <div className="gap-8 center text-[.9rem]">
-                <Link href='/'>About Us</Link>
+                <Link href='/about-us'>About Us</Link>
                 <Link href='/'>Sign Up</Link>
                 <Link href='/'>Sign In</Link>
                 <div>

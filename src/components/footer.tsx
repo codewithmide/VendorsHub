@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import Logo from "./common/logo";
 import { BsFacebook, BsTwitter, BsInstagram } from 'react-icons/bs'
 
@@ -23,22 +24,23 @@ const Footer = () => {
                 <div>
                     <h4 className="font-bold text-secondary">Services</h4>
                     <ul className="text-sm flex-col flex gap-1 mt-4">
-                        <li>Event Planner</li>
-                        <li>Catering</li>
-                        <li>DJ&apos;s</li>
-                        <li>Rentals</li>
+                        <Link href="/vendorsListings"><li>Event Planner</li></Link>
+                        <Link href="/vendorsListings"><li>Catering</li></Link>
+                        <Link href="/vendorsListings"><li>DJ&apos;s</li></Link>
+                        <Link href="/vendorsListings"><li>Rentals</li></Link>
                     </ul>
                 </div>
                 <div>
                     <h4 className="font-bold text-secondary">Company</h4>
                     <ul className="text-sm flex-col flex gap-1 mt-4">
-                        <li>About Us</li>
-                        <li>Join Us</li>
-                        <li>Contact</li>
+                        <Link href="/about-us"><li>About Us</li></Link>
+                        <Link href="/about-us"><li>Join Us</li></Link>
+                        <Link href="/about-us"><li>Contact</li></Link>
                     </ul>
                 </div>
             </div>
-            <div className="w-[90%] flex justify-between text-secondary text-sm mt-16 mb-10">
+            <hr className="text-secondary w-[90%] my-8"/>
+            <div className="w-[90%] flex justify-between text-secondary text-sm mb-6">
                 <p>&copy; {currentYear}</p>
                 <div className="flex gap-4">
                     <p>Term of use</p>
