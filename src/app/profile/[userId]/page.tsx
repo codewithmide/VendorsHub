@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { vendorsListings } from "@/utils/vendorslistings";
 import Image from "next/image";
+import ErrorVendorPage from "./error";
 
 interface VendorsProfileProps {
   params: { userId: string }
@@ -14,7 +15,7 @@ const VendorsProfile: FC<VendorsProfileProps> = ({ params }) => {
 
   if (!vendor) {
     // Handle case when vendor is not found
-    return <div>Vendor not found.</div>;
+    return <ErrorVendorPage />;
   }
 
   return (

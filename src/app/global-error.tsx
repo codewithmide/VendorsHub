@@ -3,13 +3,7 @@
 import { useEffect } from "react";
 import Link from "next/link";
 
-export default function GlobalError({
-  error,
-  reset,
-}: {
-  error: Error
-  reset: () => void
-}) {
+export default function GlobalError({ error, reset, }: { error: Error; reset: () => void;}) {
 
     useEffect(() => {
         console.error(error)
