@@ -6,6 +6,7 @@ import CustomButton from "./common/customButton";
 import Logo from "./common/logo";
 import Search from "./common/search";
 
+
 const Navbar = () => {
     return (
         <nav className="between w-[90%] my-5">
@@ -44,10 +45,3 @@ const Navbar = () => {
 }
  
 export default Navbar;
-
-{/* <CustomButton 
-        textColor="#1E1E1E"
-        cursor="pointer"
-        padding="10px 20px"
-        background="#F5BD02"
-        onClick={() => {}}>Hello</CustomButton> */}
