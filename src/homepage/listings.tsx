@@ -56,7 +56,11 @@ const Listings = () => {
                     <Image src="/svg/nairaIcon.svg" alt='price' width={20} height={20}/>
                     <p className='text-[.9rem] font-bold text-secondary'>{listing.price}</p>
                 </div>
-                <CustomButton onClick={() => {}} background='#FFF' textColor='#1E1E1E' padding='8px' borderRadius='10px'>Book</CustomButton>
+                <Link href={{ pathname: `/profile/${listing.name.replace(/\s/g, '-')}`}} passHref>
+                  <CustomButton onClick={() => {}} background="#FFF" textColor="#1E1E1E" padding="8px" borderRadius="10px">
+                    Book
+                  </CustomButton>
+                </Link>
             </div>
             ))}
             <div className='w-full flex items-end justify-end'>
