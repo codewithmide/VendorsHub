@@ -1,23 +1,15 @@
 "use client";
 
-import Logo from "@/components/common/logo";
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
 import Inbox from "./inbox";
+import Logo from "@/components/common/logo";
 
 
 interface SidebarProps {
     setShowModal: (state: boolean) => void;
 };
 
-// interface MyComponentProps {
-//     myState: string;
-//     setShowModal: (state: string) => void;
-//   }
-  
-//   const MyComponent: React.FC<MyComponentProps> = ({ myState, setMyState }) => {
-
-//   };
 
 export const Sidebar: React.FC<SidebarProps> = ({setShowModal}) => {
     return (

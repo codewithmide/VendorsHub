@@ -24,7 +24,7 @@ export const Nav = () => {
                     </Link>
                 </div>
 
-                <div className="border-[#b8d156] border center gap-1 p-1 cursor-pointer w-[4.5rem] rounded-[60px]">
+                <div className="border-white border center gap-1 p-1 cursor-pointer w-[4.5rem] rounded-[60px]">
                     <div className="">
                         <Image
                             src='/svg/hamburgerMenu.svg'
