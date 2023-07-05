@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { FC } from "react";
+import { FC, useState } from "react";
 import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 import { AiOutlineDown } from 'react-icons/ai';
 import { vendorsListings } from "@/utils/vendorslistings";
@@ -10,6 +10,7 @@ import Navbar from "@/components/navbar";
 import Categories from "@/components/common/categories";
 import CustomButton from "@/components/common/customButton";
 import Footer from '@/components/footer';
+import HighestVendors from './ratedVendors/page';
 
 interface StarRatingProps {
   rating: number;
@@ -39,12 +40,25 @@ const StarRating: FC<StarRatingProps> = ({ rating }) => {
 };
 
 const VendorsListings: FC = () => {
+  const [vendorsToShow, setVendorsToShow] = useState(24);
+
+  const handleClick = () => {
+    setVendorsToShow(vendorsToShow + 4);
+  };
+
+  const vendorsToDisplay = vendorsListings.slice(0, vendorsToShow);
+
   return (
     <div className="center flex-col w-full">
       <Navbar />
       <Categories />
+      <HighestVendors />
+      <div className="flex items-start w-[90%]">
+        <h1 className="text-secondary font-bold text-lg">MORE VENDORS</h1>
+      </div>
       <div className="w-[90%] gap-6 flex-wrap center mt-10">
-        {vendorsListings.map((vendors, index) => (
+        {vendorsToDisplay.map((vendors, index) => (
+          // Vendor card JSX
           <div key={index} className='w-[23.5%] mb-4'>
             <div className='w-full'>
               <Image src={vendors.image} alt='image' width={280} height={170} />
@@ -62,6 +76,7 @@ const VendorsListings: FC = () => {
               <Image src="/svg/nairaIcon.svg" alt='price' width={20} height={20} />
               <p className='text-[.9rem] font-bold text-secondary'>{vendors.price}</p>
             </div>
+            <p className="text-sm mb-2">{vendors.reviews} reviews</p>
             <Link href={{ pathname: `/profile/${vendors.name.replace(/\s/g, '-')}`}} passHref>
               <CustomButton onClick={() => {}} background="#FFF" textColor="#1E1E1E" padding="8px" borderRadius="10px">
                 Book
@@ -71,7 +86,7 @@ const VendorsListings: FC = () => {
         ))}
       </div>
       <div className='center mt-10 mb-28'>
-        <div className='rounded-full w-[50px] h-[50px] center border border-secondary'>
+        <div className='rounded-full w-[50px] h-[50px] center border border-secondary cursor-pointer' onClick={handleClick}>
           <AiOutlineDown color='#FFF' />
         </div>
       </div>

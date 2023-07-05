@@ -1,3 +1,5 @@
+"use client";
+
 import { FC } from "react";
 import { vendorsListings } from "@/utils/vendorslistings";
 import Image from "next/image";

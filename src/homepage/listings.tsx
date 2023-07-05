@@ -56,6 +56,7 @@ const Listings = () => {
                     <Image src="/svg/nairaIcon.svg" alt='price' width={20} height={20}/>
                     <p className='text-[.9rem] font-bold text-secondary'>{listing.price}</p>
                 </div>
+                <p className="text-sm mb-2">{listing.reviews} reviews</p>
                 <Link href={{ pathname: `/profile/${listing.name.replace(/\s/g, '-')}`}} passHref>
                   <CustomButton onClick={() => {}} background="#FFF" textColor="#1E1E1E" padding="8px" borderRadius="10px">
                     Book
