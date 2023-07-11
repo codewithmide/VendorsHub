@@ -17,10 +17,11 @@ module.exports = {
       xxxl: '5rem'
     },
     colors: {
-      primary: "#383838",
-      secondary: "#F5BD02",
+      primary: "#FFFFFF",
+      secondary: "#00CC83",
       white: "#FFFFFF",
       black: '#1E1E1E',
+      blue: '#234D9F',
       grey: "#888888",
       lightGrey: '#FDFEF9',
       green: '#00FF00',

@@ -1,6 +1,7 @@
 "use client";
 
 import Navbar from "@/components/navbar";
+import Image from 'next/image';
 import Footer from "@/components/footer";
 import { FC } from "react";
 
@@ -12,21 +13,46 @@ const AboutUs: FC<AboutUsProps> = () => {
             <Navbar />
             <div className="flex items-center flex-col my-10">
                 <h1 className="text-secondary font-bold text-lg text-center">About VendorsHub</h1>
-                <p className="w-[50%] text-sm my-8">
+                <p className="w-[50%] text-center text-sm my-8">
                     VendorsHub is a mission driven project that provides data and advocacy about Event Vendors impact on Nigerian ceremonies. We work towards a vision where data and information empower users to understand, decide and control the role of rating Event vendorsin our platform.
                 </p>
-                <div className="w-[80%] flex gap-3 mt-10">
-                    <div className="w-[50%] center bg-secondary rounded-lg p-4 flex-col">
+                <div className="w-[90%] center mt-10">
+                    <div className="w-[40%] center bg-secondary rounded-lg p-10 flex-col">
                         <h2 className="text-black font-bold text-md">Our Mission</h2>
                         <p className="text-sm text-black w-[80%] pb-6 mt-3">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ducimus soluta vero cupiditate sunt excepturi, numquam illum, praesentium error corporis rem veniam reiciendis commodi, id esse. Voluptate necessitatibus perferendis ullam iste, excepturi error amet tempora quae praesentium fuga facere blanditiis.
                         </p>
                     </div>
-                    <div className="w-[50%] center bg-secondary rounded-lg p-4 flex-col">
+                    <div className="w-[40%] center">
+                        <Image src="/images/mission.png" alt="mission image" width={400} height={300} />
+                    </div>
+                </div>
+                <div className="w-[90%] center gap-10 mt-10">
+                    <div className="w-[40%] center">
+                        <Image src="/images/vision.png" alt="mission image" width={500} height={300} />
+                    </div>
+                    <div className="w-[40%] center bg-secondary rounded-lg p-10 flex-col">
                         <h2 className="text-black font-bold text-md">Our Vision</h2>
                         <p className="text-sm text-black w-[80%] pb-6 mt-3">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ducimus soluta vero cupiditate sunt excepturi, numquam illum, praesentium error corporis rem veniam reiciendis commodi, id esse. Voluptate necessitatibus perferendis ullam iste, excepturi error amet tempora quae praesentium fuga facere blanditiis.
                         </p>
+                    </div>
+                </div>
+            </div>
+            <div className="text-secondary mt-16 w-[80%] center flex-col">
+                <h2 className="font-bold text-lg">How to be part of our community</h2>
+                <div className="w-[80%] mt-10 between">
+                    <div className="center flex-col gap-3 text-white">
+                        <Image src="/images/register.png" alt="register" width={125} height={125} loading="lazy" />
+                        <p>Register for free</p>
+                    </div>
+                    <div className="center flex-col gap-3 text-white">
+                        <Image src="/images/fill.png" alt="register" width={125} height={125} loading="lazy" />
+                        <p>Fill and upload neccessary information</p>
+                    </div>
+                    <div className="center flex-col gap-3 text-white">
+                        <Image src="/images/hiring.png" alt="register" width={100} height={100} loading="lazy" />
+                        <p>Start hiring</p>
                     </div>
                 </div>
             </div>

@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='satoshi bg-primary text-white transition duration-300'>{children}</body>
+      <body className='satoshi bg-primary text-black transition duration-300'>{children}</body>
     </html>
   )
 }

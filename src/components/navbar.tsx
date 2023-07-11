@@ -1,46 +1,49 @@
 'use client'
 
+import { useState } from 'react';
 import Link from "next/link";
-import Image from "next/image";
-import CustomButton from "./common/customButton";
 import Logo from "./common/logo";
-import Search from "./common/search";
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 
 const Navbar = () => {
+    const [openMenu, setOpenMenu ] = useState(false);
+
+    const handleOpenMenu = () => {
+        setOpenMenu(!openMenu);
+    }
+
+    const handleCloseMenu = () => {
+        setOpenMenu(false);
+    }
 
     return (
-        <nav className="between w-[90%] my-5 relative">
-            <Logo />
-            <Search />
-            <div className="gap-8 center text-[.9rem]">
-                <Link href='/about-us'>About Us</Link>
-                <Link href='/'>Sign Up</Link>
-                <Link href='/'>Sign In</Link>
-                <div>
-                    <Link href="/vendorsListings">
-                        <CustomButton onClick={() => {}} background="#FFF" textColor="#1E1E1E" textSize=".8rem">Book Vendor</CustomButton>
-                    </Link>
+        <nav className="center md:pt-8 pt-4 w-full text-white relative">
+            <div className='between w-[90%]'>
+                <Logo />
+                <div className="gap-8 md:flex items-center justify-center sm:hidden text-[.9rem]">
+                    <Link href='/about-us'>Categories</Link>
+                    <Link href='/about-us'>Services</Link>            
+                    <Link href='/about-us'>About Us</Link>            
+                    <Link href='/about-us'>Why</Link>            
+                </div>
+                <div className='md:hidden' onClick={handleOpenMenu}>
+                    <FaBars className='text-md'/>
                 </div>
             </div>
-            <div className="border-[#FDFEF9] border center gap-2 p-1 cursor-pointer w-[4.5rem] rounded-[70px]">
-                <div className="">
-                    <Image
-                        src='/svg/hamburgerMenu.svg'
-                        alt="hamburgermenu"
-                        width={15}
-                        height={15}
-                    />
+            {openMenu && (
+                <div className='w-screen bg-secondary text-white absolute top-0 right-0 left-0 center py-6'>
+                    <div className='w-[90%] flex-col flex'>
+                        <div className='flex items-end justify-end' onClick={handleCloseMenu}><FaTimes className='text-[1.5rem]' /></div>
+                        <div className="gap-8 mt-8 flex flex-col text-[1rem]">
+                            <Link href='/about-us'>Categories</Link>
+                            <Link href='/about-us'>Services</Link>            
+                            <Link href='/about-us'>About Us</Link>            
+                            <Link href='/about-us'>Why</Link>            
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <Image
-                        src='/images/profilePicture.png'
-                        alt="hamburgermenu"
-                        width={30}
-                        height={30}
-                    />
-                </div>
-            </div>
+            )}
         </nav>
     );
 }
