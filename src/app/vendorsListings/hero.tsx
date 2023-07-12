@@ -11,8 +11,9 @@ const VendorsHero = () => {
         style={{
           background: `
             linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-            url("./images/VendorsHero.png") center center no-repeat
+            url("/images/VendorsHero.png") center center no-repeat
           `,
+          backgroundSize: 'cover',
         }}>
                 <ListingNavbar />
                 <div className="w-[90%] text-white flex items-center md:justify-start justify-center my-auto">
