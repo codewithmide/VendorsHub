@@ -20,11 +20,9 @@ const Listings = () => {
                     <h3 className='text-[1.3rem] text-blue font-bold'>{listing.name}</h3>
                     <p className='text-sm my-4 text-black h-[80px]'>{listing.description}</p>
                 </div>
-                <Link href={{ pathname: `/profile/${listing.name.replace(/\s/g, '-')}`}} passHref>
-                  <CustomButton onClick={() => {}} background="#00CC83" textColor="#FFF" padding="10px" borderRadius="5px">
+                <CustomButton onClick={() => {}} background="#00CC83" textColor="#FFF" padding="10px" borderRadius="5px">
                     Hire
-                  </CustomButton>
-                </Link>
+                </CustomButton>
             </div>
             ))}
             <div className='w-full flex items-end justify-end'>
