@@ -24,11 +24,7 @@
 //     <div>
 //       <h1>{vendor.name}</h1>
 //       <Image width={300} height={400} src={vendor.image} alt="Vendor" />
-//       <p>{vendor.address}</p>
 //       <p>{vendor.description}</p>
-//       <p>{vendor.price}</p>
-//       <p>{vendor.reviews}</p>
-//       <p>{vendor.rating}</p>
 //     </div>
 //   );
 // };
