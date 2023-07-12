@@ -35,6 +35,11 @@ body, html {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.card-shadow {
+  background: #FFF;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.11);
+}
+
 /* Loading screen style starts */
 .loader {
   width: 112px;

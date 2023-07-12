@@ -2,8 +2,11 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { categories } from '@/utils/categories';
 import Search from '@/components/common/search';
+import { vendorsListings } from "@/utils/vendorslistings";
+import CustomButton from "@/components/common/customButton";
 
 const Categories = () => {
   const [visibleCategories, setVisibleCategories] = useState(6);
@@ -97,7 +100,30 @@ const Categories = () => {
         </div>
       </div>
       <div className="w-[90%] mx-auto my-10">
-        <Search />
+        <div className="md:w-[40%]">
+          <Search />
+        </div>
+      </div>
+      <div className="center w-full">
+        <div className="w-[90%] gap-6 flex-wrap flex mt-10">
+          {vendorsListings.map((listing, index) => (
+            // Vendor card JSX
+            <div key={index} className='lg:w-[31.5%] md:w-[48%] w-full mb-4 card-shadow'>
+                <div className='w-full h-[285px]'>
+                    <Image src={listing.image} alt='image' width={393} height={282}/>
+                </div>
+                <div className='flex flex-col my-3 p-3'>
+                    <h3 className='text-[1.3rem] text-blue font-bold'>{listing.name}</h3>
+                    <p className='text-sm my-4 text-black h-[80px]'>{listing.description}</p>
+                </div>
+                <Link href={{ pathname: `/profile/${listing.name.replace(/\s/g, '-')}`}} passHref>
+                  <CustomButton onClick={() => {}} background="#00CC83" textColor="#FFF" padding="10px" borderRadius="5px">
+                    Hire
+                  </CustomButton>
+                </Link>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

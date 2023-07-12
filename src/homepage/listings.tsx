@@ -10,14 +10,14 @@ const Listings = () => {
     return (
       <div className='w-full my-6 flex-col flex items-center md:justify-start justify-center'>
         <h2 className='font-bold text-black my-8 text-md md:text-left w-[90%] text-center'>A Trusted Vendors Listing Platform </h2>
-        <div className='w-[90%] gap-3 flex-wrap center'>
+        <div className='w-[90%] gap-3 flex-wrap flex'>
             {homeListings.map((listing, index) => (
-            <div key={index} className='lg:w-[32%] md:w-[48%] w-full mb-4'>
+            <div key={index} className='lg:w-[32%] md:w-[48%] w-full mb-4 card-shadow'>
                 <div className='w-full'>
                     <Image src={listing.image} alt='image' width={393} height={282}/>
                 </div>
                 <div className='flex flex-col my-3 p-3'>
-                    <h3 className='text-[1rem] text-blue tracking-wider font-bold'>{listing.name}</h3>
+                    <h3 className='text-[1.3rem] text-blue font-bold'>{listing.name}</h3>
                     <p className='text-sm my-4 text-black h-[80px]'>{listing.description}</p>
                 </div>
                 <Link href={{ pathname: `/profile/${listing.name.replace(/\s/g, '-')}`}} passHref>
