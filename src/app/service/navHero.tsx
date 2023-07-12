@@ -1,28 +1,30 @@
 "use client"
 
-import { Nav } from "./nav";
+import Nav from './nav';
+import React from "react";
 
-
-interface NavHeroProps {
-    backgroundImg: string;
-    title: string;
-    body: string;
-    buttonText?: string;
-};
-
-const NavHero: React.FC<NavHeroProps> = ({backgroundImg, title, body, buttonText}) => {    
-
+const NavHero = () => {
     return (
-        <div className={` w-[100vw]  bg-center bg-cover px-8 md:px-12 py-8`} style={{backgroundImage: `            linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),        ${backgroundImg}`,opacity: '0.8'}}>
-            <Nav />
-
-            <div className="text-center md:text-left md:my-16 text-white my-32  md:w-[50%]">
-                {title && <h2 className="text-[1.6rem] md:text-[2.7rem] leadin-[3rem]">{title}</h2>}
-                {body && <p className='my-8 text-[1rem] md:text-[1.1rem]'>{body}</p>}
-                {buttonText && <button className="bg-green px-16 md:px-28 py-2 ">{buttonText}</button>}
-            </div>
+        <div className="flex-col w-screen flex items-center h-[25rem]"
+        style={{
+          background: `
+            linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+            url("./images/VendorsHero.png") center center no-repeat
+          `,
+        }}>
+                <Nav />
+                <div className="w-[90%] text-white flex items-center md:justify-start justify-center my-auto">
+                    <div className="flex-col flex md:items-start sm:items-center md:justify-start sm:justify-center lg:w-[60%] gap-6">
+                        <h1 className="hero-text md:text-[2.5rem] text-[1.3rem] sm:text-center md:text-left">
+                            Services
+                        </h1>
+                        <p className="md:text-md text-sm mb-6 lg:w-4/5 sm:text-center md:text-left">
+                            We create a seamless expereince for both clients and vendors
+                        </p>
+                    </div>
+                </div>
         </div>
     );
-};
-
+}
+ 
 export default NavHero;

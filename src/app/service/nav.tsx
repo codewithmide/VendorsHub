@@ -1,57 +1,51 @@
-"use client";
+'use client'
 
-import { useState } from "react";
-import { AiOutlineClose } from "react-icons/ai";
-import Image from "next/image";
+import { useState } from 'react';
 import Link from "next/link";
-import Logo from "@/components/common/logo";
+import Logo from '@/components/common/logo';
+import { FaTimes } from 'react-icons/fa';
 
 
+const Nav = () => {
+    const [openMenu, setOpenMenu ] = useState(false);
 
-export const Nav = () => {
-    const [isMenuToggled, setIsMenuToggled] = useState(false);
+    const handleOpenMenu = () => {
+        setOpenMenu(!openMenu);
+    }
+
+    const handleCloseMenu = () => {
+        setOpenMenu(false);
+    }
 
     return (
-        <nav className="flex items-center justify-between mx-auto ">
-            <Logo />
-
-            {/* DESKTOP NAV */}
-                    <div className="md:flex justify-between gap-16 text-sm font-semibold hidden text-white">
-                        {/* <Link className={`hover:text-secondary text-[1.1rem] transition duration-100 ${router.pathname === 'vendorsListings' ? 'text-secondary' : ''}`} href='/vendorsListings'>Categories</Link>
-                        <Link className={`hover:text-secondary text-[1.1rem] transition duration-100 ${router.pathname === 'service' ? 'text-secondary' : ''}`} href='/service'>Services</Link>
-                        <Link className={`hover:text-secondary text-[1.1rem] transition duration-100 ${router.pathname === 'about-us' ? 'text-secondary' : ''}`} href='/about-us'>About Us</Link>
-                        <Link className={`hover:text-secondary text-[1.1rem] transition duration-100 ${router.pathname === 'profile' ? 'text-secondary' : ''}`} href='/profile'>Why</Link> */}
-                        <Link className="hover:text-secondary text-[1.1rem] transition duration-100" href='/service'>Categories</Link>
-                        <Link className="hover:text-secondary text-[1.1rem] transition duration-100" href='/service'>Services</Link>
-                        <Link className="hover:text-secondary text-[1.1rem] transition duration-100" href='/about-us'>About Us</Link>
-                        <Link className="hover:text-secondary text-[1.1rem] transition duration-100" href='/profile'>Why</Link>
-                    </div>
-                    <div className="md:hidden cursor-pointer" onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                        <Image
-                            src='/svg/hamburgerMenu.svg'
-                            alt="hamburgermenu"
-                            width={25}
-                            height={25}
-                        />
-                    </div>                        
-
-            {/* MOBILE MENU POPUP */}
-            {isMenuToggled && (
-                <div className={` md:hidden fixed top-0 left-0 py-8  bg-secondary w-full z-50`}>
-                    {/* CLOSE ICON */}
-                    <div className="flex justify-end  cursor-pointer mr-3 " onClick={() => setIsMenuToggled(!isMenuToggled)} >
-                        <AiOutlineClose className="text-white text-[2.4rem]" />
-                    </div>
-
-                    {/* MENU ITEMS */}
-                    <div className="flex flex-col gap-10 pl-4 text-deep-blue text-white z-40">
-                        <Link className="hover:opacity-80 text-[1.1rem] transition duration-100" href='/vendorsListings'>Categories</Link>
-                        <Link className="hover:opacity-80 text-[1.1rem] transition duration-100" href='/service'>Services</Link>
-                        <Link className="hover:opacity-80 text-[1.1rem] transition duration-100" href='/about-us'>About Us</Link>
-                        <Link className="hover:opacity-80 text-[1.1rem]transition duration-100" href='/profile'>Why</Link>
+        <nav className="center md:pt-8 pt-4 w-full text-white relative">
+            <div className='between w-[90%]'>
+                <Logo />
+                <div className="gap-8 md:flex items-center justify-center sm:hidden text-[.9rem]">
+                    <Link href='/vendorsListings'>Categories</Link>
+                    <Link href='/service' className='text-secondary'>Services</Link>            
+                    <Link href='/about-us'>About Us</Link>            
+                    <Link href='/why'>Why</Link>             
+                </div>
+                <div className='md:hidden' onClick={handleOpenMenu}>
+                    <img src="/svg/menu.svg" alt="menu" width={27} />
+                </div>
+            </div>
+            {openMenu && (
+                <div className='w-screen bg-white text-black absolute top-0 right-0 left-0 center py-6'>
+                    <div className='w-[90%] flex-col flex'>
+                        <div className='flex items-end justify-end' onClick={handleCloseMenu}><FaTimes className='text-[1.5rem]' /></div>
+                        <div className="gap-8 mt-8 flex flex-col text-[1rem]">
+                            <Link href='/vendorsListings'>Categories</Link>
+                            <Link href='/service' className='text-secondary'>Services</Link>            
+                            <Link href='/about-us'>About Us</Link>            
+                            <Link href='/why'>Why</Link>          
+                        </div>
                     </div>
                 </div>
-            )}        
+            )}
         </nav>
     );
-};
+}
+ 
+export default Nav;

@@ -40,5 +40,17 @@ export const categories = [
     {
       job: 'Beauticians',
     },
+    {
+      job: 'Smoothies',
+    },
+    {
+      job: 'Small Chops',
+    },
+    {
+      job: 'Media',
+    },
+    {
+      job: 'Ushers',
+    },
   ];
   

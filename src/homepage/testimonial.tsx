@@ -15,7 +15,7 @@ const Testimonial = () => {
                                 <p className='mb-8 md:text-[.9rem] text-sm'>{testimonial.testimony}</p>
                             </div>
                             <div className='flex items-center gap-3 mt-3'>
-                                <Image src={testimonial.image} alt='image' width={60} height={60} />
+                                <Image src={testimonial.image} alt='image' width={60} height={60} className="rounded-full" />
                                 <div className='flex flex-col text-sm'>
                                     <p className='font-bold text-[1rem]'>{testimonial.name}</p>
                                     <p>{testimonial.user}</p>
