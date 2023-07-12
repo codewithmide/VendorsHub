@@ -1,7 +1,5 @@
 "use client";
 
-import Link from 'next/link'
-import CustomButton from "@/components/common/customButton";
 import React from "react";
 import ListingNavbar from './common/ListingNav';
 
@@ -11,7 +9,7 @@ const VendorsHero = () => {
         style={{
           background: `
             linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-            url("/images/VendorsHero.png") center center no-repeat
+            url("/images/vendorsHero.png") center center no-repeat
           `,
           backgroundSize: 'cover',
         }}>

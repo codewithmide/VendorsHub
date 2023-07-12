@@ -9,7 +9,7 @@ const NavHero = () => {
         style={{
           background: `
             linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-            url("/images/VendorsHero.png") center center no-repeat
+            url("/images/servicesHero.png") center center no-repeat
           `,
           backgroundSize: 'cover',
         }}>
