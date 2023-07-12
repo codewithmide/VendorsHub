@@ -11,33 +11,8 @@ import Categories from "@/components/common/categories";
 import CustomButton from "@/components/common/customButton";
 import Footer from '@/components/footer';
 import HighestVendors from './ratedVendors/page';
+import VendorsHero from './hero';
 
-interface StarRatingProps {
-  rating: number;
-}
-
-const StarRating: FC<StarRatingProps> = ({ rating }) => {
-  const fullStars = Math.floor(rating);
-  const hasHalfStar = rating % 1 !== 0;
-
-  const stars = [];
-  for (let i = 0; i < fullStars; i++) {
-    stars.push(<FaStar key={i} color="#F5BD02" />);
-  }
-  if (hasHalfStar) {
-    stars.push(<FaStarHalfAlt key="half" color="#F5BD02" />);
-  }
-  const remainingStars = 5 - stars.length;
-  for (let i = 0; i < remainingStars; i++) {
-    stars.push(<FaRegStar key={`empty-${i}`} color="#FFFFFF" />);
-  }
-
-  return (
-    <div className='flex'>
-      {stars}
-    </div>
-  );
-};
 
 const VendorsListings: FC = () => {
   const [vendorsToShow, setVendorsToShow] = useState(24);
@@ -50,9 +25,9 @@ const VendorsListings: FC = () => {
 
   return (
     <div className="center flex-col w-full">
-      <Navbar />
+      <VendorsHero />
       <Categories />
-      <HighestVendors />
+      {/* <HighestVendors />
       <div className="flex items-start w-[90%]">
         <h1 className="text-secondary font-bold text-lg">MORE VENDORS</h1>
       </div>
@@ -65,7 +40,6 @@ const VendorsListings: FC = () => {
             </div>
             <div className='flex my-3 between'>
               <h3 className='text-sm text-secondary tracking-wider font-bold'>{vendors.name}</h3>
-              <StarRating rating={vendors.rating} />
             </div>
             <div className='flex gap-2'>
               <Image src="/svg/location.svg" alt='location' width={10} height={10} />
@@ -89,7 +63,7 @@ const VendorsListings: FC = () => {
         <div className='rounded-full w-[50px] h-[50px] center border border-secondary cursor-pointer' onClick={handleClick}>
           <AiOutlineDown color='#FFF' />
         </div>
-      </div>
+      </div> */}
       <Footer />
     </div>
   );

@@ -24,7 +24,7 @@ const Hero = () => {
                             Register now to Hire qualified vendors who will deliver quality Jobs and put a smile on your Face
                         </p>
                         <div>
-                            <Link href="/about-us">
+                            <Link href="/vendorsListings">
                                 <CustomButton 
                                     onClick={() => {}}
                                     padding="15px 50px"

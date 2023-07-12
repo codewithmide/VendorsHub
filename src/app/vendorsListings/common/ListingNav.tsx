@@ -2,11 +2,11 @@
 
 import { useState } from 'react';
 import Link from "next/link";
-import Logo from "./common/logo";
+import Logo from '@/components/common/logo';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 
-const Navbar = () => {
+const ListingNavbar = () => {
     const [openMenu, setOpenMenu ] = useState(false);
 
     const handleOpenMenu = () => {
@@ -22,7 +22,7 @@ const Navbar = () => {
             <div className='between w-[90%]'>
                 <Logo />
                 <div className="gap-8 md:flex items-center justify-center sm:hidden text-[.9rem]">
-                    <Link href='/vendorsListings'>Categories</Link>
+                    <Link href='/about-us' className='text-secondary'>Categories</Link>
                     <Link href='/about-us'>Services</Link>            
                     <Link href='/about-us'>About Us</Link>            
                     <Link href='/about-us'>Why</Link>            
@@ -36,7 +36,7 @@ const Navbar = () => {
                     <div className='w-[90%] flex-col flex'>
                         <div className='flex items-end justify-end' onClick={handleCloseMenu}><FaTimes className='text-[1.5rem]' /></div>
                         <div className="gap-8 mt-8 flex flex-col text-[1rem]">
-                            <Link href='/vendorsListings'>Categories</Link>
+                            <Link href='/vendorsListing' className='text-secondary'>Categories</Link>
                             <Link href='/about-us'>Services</Link>            
                             <Link href='/about-us'>About Us</Link>            
                             <Link href='/about-us'>Why</Link>            
@@ -48,4 +48,4 @@ const Navbar = () => {
     );
 }
  
-export default Navbar;
+export default ListingNavbar;

@@ -1,3 +1,4 @@
+@import '@splidejs/react-splide/css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,6 +29,10 @@ body, html {
 
 .custom-card:hover img {
   filter: brightness(0) invert(1); /* Apply white color to the SVG on hover */
+}
+
+.category {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 /* Loading screen style starts */
