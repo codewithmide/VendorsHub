@@ -4,6 +4,7 @@ import { FC } from "react";
 import Categories from "@/components/common/categories";
 import Footer from '@/components/footer';
 import VendorsHero from './hero';
+import Register from "@/components/common/register";
 
 const VendorsListings: FC = () => {
 
@@ -21,6 +22,7 @@ const VendorsListings: FC = () => {
     <div className="center flex-col w-full">
       <VendorsHero />
       <Categories />
+      <Register />
       <Footer />
     </div>
   );
