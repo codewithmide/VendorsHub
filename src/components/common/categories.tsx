@@ -113,27 +113,31 @@ const Categories = () => {
       </div>
       <div className="center w-full">
         <div className="w-[90%] gap-6 flex-wrap flex mt-10">
-          {filteredVendorsListings.map((listing, index) => (
-            // Vendor card JSX
-            <div key={index} className="lg:w-[31.5%] md:w-[48%] w-full mb-4 card-shadow">
-              <div className="w-full h-[285px]">
-                <Image src={listing.image} alt="image" width={393} height={282} />
+        {filteredVendorsListings.length > 0 ? (
+            filteredVendorsListings.map((listing, index) => (
+              // Vendor card JSX
+              <div key={index} className="lg:w-[31.5%] md:w-[48%] w-full mb-4 card-shadow">
+                <div className="w-full h-[285px]">
+                  <Image src={listing.image} alt="image" width={393} height={282} />
+                </div>
+                <div className="flex flex-col my-3 p-3">
+                  <h3 className="text-[1.3rem] text-blue font-bold">{listing.name}</h3>
+                  <p className="text-[.85rem] my-4 text-black h-[80px]">{listing.description}</p>
+                </div>
+                <CustomButton
+                  onClick={() => {}}
+                  background="#00CC83"
+                  textColor="#FFF"
+                  padding="10px"
+                  borderRadius="5px"
+                >
+                  Hire
+                </CustomButton>
               </div>
-              <div className="flex flex-col my-3 p-3">
-                <h3 className="text-[1.3rem] text-blue font-bold">{listing.name}</h3>
-                <p className="text-[.85rem] my-4 text-black h-[80px]">{listing.description}</p>
-              </div>
-              <CustomButton
-                onClick={() => {}}
-                background="#00CC83"
-                textColor="#FFF"
-                padding="10px"
-                borderRadius="5px"
-              >
-                Hire
-              </CustomButton>
-            </div>
-          ))}
+            ))
+          ) : (
+            <h2 className="text-center text-black text-lg mb-10">Vendor does not exist.</h2>
+          )}
         </div>
       </div>
     </div>

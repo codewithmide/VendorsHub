@@ -22,14 +22,12 @@ const Search = ({ onSearch }: any) => {
         onChange={(e) => setSearchText(e.target.value)}
       />
       <div>
-        <CustomButton
+        <button
           type="submit"
-          padding="10px 10px"
-          background="white"
-          border="1px solid black"
+          className='p-[10px] bg-white border border-black rounded-full'
         >
           <Image src="/svg/search.svg" width={18} height={18} alt="search" priority />
-        </CustomButton>
+        </button>
       </div>
     </form>
   );
