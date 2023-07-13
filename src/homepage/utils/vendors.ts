@@ -2,32 +2,32 @@ export const LevrageVendors = [
     {
         icon: '/svg/bakers.svg',
         name: 'Bakers',
-        description: 'Creative Photographer capturing captivating moments with a unique perspective.'
+        description: 'Bakers are individuals or businesses that prepare and bake bread, pastries, and other baked goods.'
     },
     {
         icon: '/svg/eventPlanner.svg',
         name: 'Event Planner',
-        description: 'Creative Photographer capturing captivating moments with a unique perspective.'
+        description: 'Event planners are professionals who organize and coordinate various aspects of events, such as parties, conferences, weddings, and corporate functions.'
     },
     {
         icon: '/svg/photographer.svg',
         name: 'Photographers',
-        description: 'Creative Photographer capturing captivating moments with a unique perspective.'
+        description: 'Photographers are individuals who use cameras and other equipment to capture images of people, places, events, and objects.'
     },
     {
         icon: '/svg/leather.svg',
         name: 'Leather works',
-        description: 'Creative Photographer capturing captivating moments with a unique perspective.'
+        description: 'Leatherworkers are skilled artisans who create products using leather as their primary material. They craft a wide range of items such as bags, wallets, shoes, belts, and accessories through techniques like cutting, stitching, and shaping leather.'
     },
     {
         icon: '/svg/tailor.svg',
         name: 'Tailors',
-        description: 'Creative Photographer capturing captivating moments with a unique perspective.'
+        description: 'Tailors are professionals who specialize in creating and altering clothing to fit individuals.'
     },
     {
         icon: '/svg/hair.svg',
         name: 'Hair Stylist',
-        description: 'Creative Photographer capturing captivating moments with a unique perspective.'
+        description: 'Hair stylists are professionals who specialize in styling, cutting, coloring, and treating hair.'
     },
 ]
 
