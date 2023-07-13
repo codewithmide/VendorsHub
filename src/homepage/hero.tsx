@@ -4,6 +4,7 @@ import Link from 'next/link'
 import CustomButton from "@/components/common/customButton";
 import React from "react";
 import Navbar from '@/components/navbar';
+import { motion } from "framer-motion"
 
 const Hero = () => {
     return (

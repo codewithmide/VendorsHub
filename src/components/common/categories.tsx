@@ -87,7 +87,7 @@ const Categories = () => {
             {categories.slice(startIndex, startIndex + visibleCategories).map((category, index) => (
               <div
                 key={index}
-                className="w-[160px] h-[90px] flex items-center justify-center category my-6"
+                className="w-[160px] h-[90px] flex items-center justify-center category my-6 hover:bg-blue hover:text-white"
               >
                 {category.job}
               </div>

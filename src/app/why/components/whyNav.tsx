@@ -6,7 +6,7 @@ import Logo from '@/components/common/logo';
 import { FaTimes } from 'react-icons/fa';
 
 
-const ListingNavbar = () => {
+const WhyNavbar = () => {
     const [openMenu, setOpenMenu ] = useState(false);
 
     const handleOpenMenu = () => {
@@ -22,10 +22,10 @@ const ListingNavbar = () => {
             <div className='between w-[90%]'>
                 <Logo />
                 <div className="gap-8 md:flex items-center justify-center sm:hidden text-[.9rem]">
-                    <Link href='/vendorsListings' className='text-secondary'>Categories</Link>
+                    <Link href='/vendorsListings'>Categories</Link>
                     <Link href='/service'>Services</Link>            
                     <Link href='/about-us'>About Us</Link>            
-                    <Link href='/why'>Why</Link>             
+                    <Link href='/why' className='text-secondary'>Why</Link>             
                 </div>
                 <div className='md:hidden' onClick={handleOpenMenu}>
                     <img src="/svg/menu.svg" alt="menu" width={27} />
@@ -36,10 +36,10 @@ const ListingNavbar = () => {
                     <div className='w-[90%] flex-col flex'>
                         <div className='flex items-end justify-end' onClick={handleCloseMenu}><FaTimes className='text-[1.5rem]' /></div>
                         <div className="gap-8 mt-8 flex flex-col text-[1rem]">
-                            <Link href='/vendorsListing' className='text-secondary'>Categories</Link>
+                            <Link href='/vendorsListings'>Categories</Link>
                             <Link href='/service'>Services</Link>            
                             <Link href='/about-us'>About Us</Link>            
-                            <Link href='/why'>Why</Link>          
+                            <Link href='/why' className='text-secondary'>Why</Link>          
                         </div>
                     </div>
                 </div>
@@ -48,4 +48,4 @@ const ListingNavbar = () => {
     );
 }
  
-export default ListingNavbar;
+export default WhyNavbar;
