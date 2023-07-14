@@ -22,7 +22,7 @@ const Service = () => {
         <div className="w-full center flex-col">
             <NavHero />
             <section className="text-center bg-white w-[90%] py-12">
-                <h3 className="md:text-[2rem] text-[1.3rem] text-black">Partenering with you on your business Journey</h3>
+                <h3 className="md:text-[2rem] text-[1.3rem] text-black">Partnering with you on your business Journey</h3>
                 <p className="md:text-[1rem] text-sm text-grey">From registration to getting clients we are here to help you get your business desired result</p>
 
                 <p className="lg:w-[80%] w-[90%] mx-auto md:text-left mt-6 text-black md:text-[1.3rem] text-[.9rem]">{serviceInfo}</p>

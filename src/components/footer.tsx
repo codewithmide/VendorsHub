@@ -19,9 +19,6 @@ const Footer = () => {
                         <BsFacebook />
                         <BsTwitter />
                         <BsInstagram />
-                        <a href="https://github.com/codewithmide/VendorsHub" target='_blank'>
-                            <BsGithub />
-                        </a>
                     </div>
                 </div>
                 <div>

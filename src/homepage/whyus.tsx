@@ -6,16 +6,16 @@ const WhyUs = () => {
     return (
         <div className="w-full center my-10 flex-col">
             <h2 className="text-black md:text-lg text-[1.3rem] w-[70%] text-center">Leveraging World Class Vendors</h2>
-            <p className="md:w-2/3 text-center w-[80%] sm:text-sm md:text-[1rem]">
+            <p className="md:w-2/3 text-center w-[80%] sm:text-sm md:text-[1rem] text-grey">
                 We are a brand hoping to deliver and become on of the largest network for clients to find world class Vendors  
             </p>
             <div className="w-full center mt-10">
                 <div className="bg-[#CDCDCD] center w-[90%]">
-                    <div className="w-full center flex-wrap gap-1">
+                    <div className="w-full center flex-wrap gap-[.1rem]">
                     {LevrageVendors.map((vendors, index) => (
                         <div
                             key={index}
-                            className="lg:w-[33%] md:w-[49.5%] w-full flex items-start justify-center gap-3 md:pl-10 sm:pl-4 flex-col bg-[#F0F0F0] h-[300px] hover:bg-[#234D9F] hover:text-white duration-300 transition-all custom-card"
+                            className="lg:w-[33.24%] md:w-[49.5%] w-full flex items-start justify-center gap-3 md:pl-10 sm:pl-4 flex-col bg-[#F0F0F0] h-[380px] hover:bg-[#234D9F] hover:text-white duration-300 transition-all custom-card"
                         >
                             <img src={vendors.icon} alt="icon" height={85} />
                             <h3 className="font-bold text-md">{vendors.name}</h3>
@@ -37,13 +37,42 @@ const WhyUs = () => {
                     </div>
                 ))}
             </div>
+            <h2 className="text-black md:text-lg text-[1.3rem] w-[80%] text-center mt-16">
+                Listing Made Easy
+            </h2>
+            <div className="lg:w-[60%] sm:w-[90%] between flex-col md:flex-row gap-6 md:gap-0 md:mt-16 mt-10">
+                <div className="flex-col center gap-2">
+                    <div className="w-[50px] h-[50px] center rounded-full border border-black">
+                        1
+                    </div>
+                    <div className="text-sm">Register</div>
+                </div>
+                <div className="mt-[-2rem] md:flex hidden">
+                    <img src="/images/Arrow.svg" alt="arrow" />
+                </div>
+                <div className="flex-col center gap-2">
+                    <div className="w-[50px] h-[50px] center rounded-full border border-black">
+                        2
+                    </div>
+                    <div className="text-sm">Your profile is added</div>
+                </div>
+                <div className="mt-[-2rem] md:flex hidden">
+                    <img src="/images/Arrow.svg" alt="arrow" />
+                </div>
+                <div className="flex-col center gap-2">
+                    <div className="w-[50px] h-[50px] center rounded-full border border-black">
+                        3
+                    </div>
+                    <div className="text-sm">Clients connects with You</div>
+                </div>
+            </div>
             <h2 className="text-black md:text-lg text-[1.3rem] w-[80%] text-center mt-20">Why Clients/Organisations choose VendorsHub</h2>
             <div className="w-[90%] center mt-10 bg-[#CDCDCD]">
-                <div className="w-full center flex-wrap gap-1">
+                <div className="w-full center flex-wrap gap-[.1rem]">
                     {Why.map((why, index) => (
                         <div
                             key={index}
-                            className="lg:w-[33%] w-full center gap-3 flex-col bg-[#F0F0F0] h-[300px] hover:bg-[#234D9F] hover:text-white duration-300 transition-all custom-card"
+                            className="lg:w-[33.24%] w-full center gap-3 flex-col bg-[#F0F0F0] h-[300px] custom-card"
                         >
                             <h3 className="font-bold text-[1.4rem] text-center w-[80%]">{why.heading}</h3>
                             <p className="text-center w-2/3">{why.text}</p>
@@ -53,11 +82,11 @@ const WhyUs = () => {
             </div>
             <h2 className="text-black md:text-lg text-[1.3rem] w-[80%] text-center mt-20">Why Vendors list with us</h2>
             <div className="w-[90%] center mt-10 bg-[#CDCDCD]">
-                <div className="w-full center flex-wrap gap-1">
+                <div className="w-full center flex-wrap gap-[.1rem]">
                     {List.map((why, index) => (
                         <div
                             key={index}
-                            className="lg:w-[33%] w-full center gap-3 flex-col bg-[#F0F0F0] h-[300px] hover:bg-[#234D9F] hover:text-white duration-300 transition-all custom-card"
+                            className="lg:w-[33.24%] w-full center gap-3 flex-col bg-[#F0F0F0] h-[300px] custom-card"
                         >
                             <h3 className="font-bold text-[1.4rem] text-center w-[80%]">{why.heading}</h3>
                             <p className="text-center w-2/3">{why.text}</p>

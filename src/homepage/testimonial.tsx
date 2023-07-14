@@ -12,7 +12,7 @@ const Testimonial = () => {
                         <div key={index} className="bg-white lg:w-[32%] md:w-[49%] h-[400px] w-full rounded-sm p-8 flex flex-col justify-center">
                             <div>
                                 <h2 className='font-bold text-xxl text-blue'>“</h2>
-                                <p className='mb-8 md:text-[.9rem] text-sm'>{testimonial.testimony}</p>
+                                <p className='mb-8 md:text-[1rem] text-sm -mt-10 h-[150px]'>{testimonial.testimony}</p>
                             </div>
                             <div className='flex items-center gap-3 mt-3'>
                                 <Image src={testimonial.image} alt='image' width={60} height={60} className="rounded-full" />
