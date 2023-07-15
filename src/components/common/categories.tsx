@@ -142,19 +142,19 @@ const Categories = () => {
       {selectedListing && (
         <div className="modal fixed top-0 left-0 w-full h-full overflow-y-scroll  center">
           <div className="w-full md:-[80%] pt-[20rem] pb-[5rem] bg-white center flex-col px-[40px]  rounded-[5px] overflow-y-scroll">
-            <h3 className="text-[2rem] text-blue font-bold">{selectedListing.name}</h3>
-            <p className="font-bold">{selectedListing.location}</p>
-            <img src={selectedListing.image} alt="vendors image" className="my-10"/>
+            <h3 className="text-[2rem] text-blue font-bold">{selectedListing?.name}</h3>
+            <p className="font-bold">{selectedListing?.location}</p>
+            <img src={selectedListing?.image} alt="vendors image" className="my-10"/>
             <div className="flex flex-col gap-4 my-6">
-              <p className="font-bold text-md">Business Owner: {selectedListing.fullname}</p>
-              <p className="font-bold text-md">Year of experience: {selectedListing.experience}</p>
-              <p className="font-bold text-md">Services offered: {selectedListing.service}</p>
+              <p className="font-bold text-md">Business Owner: {selectedListing?.fullname}</p>
+              <p className="font-bold text-md">Year of experience: {selectedListing?.experience}</p>
+              <p className="font-bold text-md">Services offered: {selectedListing?.service}</p>
               <div className="text-md mt-4 gap-2">
                 <p className="font-bold">Biography</p>
-                <p className="text-black">{selectedListing.description}</p>
+                <p className="text-black">{selectedListing?.description}</p>
               </div>
-              <p className="font-bold text-md">Contact details: {selectedListing.phone}</p>
-              <p className="font-bold text-md">Social media: {selectedListing.social}</p>
+              <p className="font-bold text-md">Contact details: {selectedListing?.phone}</p>
+              <p className="font-bold text-md">Social media: {selectedListing?.social}</p>
             </div>
             <CustomButton onClick={closeModal} background="#00CC83" textColor="#FFF" padding="10px" borderRadius="5px">
               Close
