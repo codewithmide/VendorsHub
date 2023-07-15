@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { categories } from '@/utils/categories';
 import Search from '@/components/common/search';
@@ -11,6 +11,7 @@ const Categories = () => {
   const [visibleCategories, setVisibleCategories] = useState(6);
   const [startIndex, setStartIndex] = useState(0);
   const [filteredVendorsListings, setFilteredVendorsListings] = useState(vendorsListings);
+  const [selectedListing, setSelectedListing] = useState(null);
 
   const updateVisibleCategories = () => {
     const screenWidth = window.innerWidth;
@@ -27,15 +28,13 @@ const Categories = () => {
     setVisibleCategories(newVisibleCategories);
   };
 
-  useEffect(() => {
-    updateVisibleCategories();
+  const handleHireClick = (listing: any) => {
+    setSelectedListing(listing);
+  };
 
-    window.addEventListener('resize', updateVisibleCategories);
-
-    return () => {
-      window.removeEventListener('resize', updateVisibleCategories);
-    };
-  }, []);
+  const closeModal = () => {
+    setSelectedListing(null);
+  };
 
   const showNextCategories = () => {
     const nextIndex = startIndex + 1;
@@ -113,9 +112,8 @@ const Categories = () => {
       </div>
       <div className="center w-full">
         <div className="w-[90%] gap-6 flex-wrap flex mt-10">
-        {filteredVendorsListings.length > 0 ? (
+          {filteredVendorsListings.length > 0 ? (
             filteredVendorsListings.map((listing, index) => (
-              // Vendor card JSX
               <div key={index} className="lg:w-[31.5%] md:w-[48%] w-full mb-4 card-shadow">
                 <div className="w-full h-[285px]">
                   <Image src={listing.image} alt="image" width={393} height={282} />
@@ -125,7 +123,7 @@ const Categories = () => {
                   <p className="text-[.85rem] my-4 text-black h-[80px]">{listing.description}</p>
                 </div>
                 <CustomButton
-                  onClick={() => {}}
+                  onClick={() => handleHireClick(listing)}
                   background="#00CC83"
                   textColor="#FFF"
                   padding="10px"
@@ -140,6 +138,30 @@ const Categories = () => {
           )}
         </div>
       </div>
+
+      {selectedListing && (
+        <div className="modal fixed top-0 left-0 w-full h-full overflow-y-scroll  center">
+          <div className="w-full md:-[80%] pt-[20rem] pb-[5rem] bg-white center flex-col px-[40px]  rounded-[5px] overflow-y-scroll">
+            <h3 className="text-[2rem] text-blue font-bold">{selectedListing.name}</h3>
+            <p className="font-bold">{selectedListing.location}</p>
+            <img src={selectedListing.image} alt="vendors image" className="my-10"/>
+            <div className="flex flex-col gap-4 my-6">
+              <p className="font-bold text-md">Business Owner: {selectedListing.fullname}</p>
+              <p className="font-bold text-md">Year of experience: {selectedListing.experience}</p>
+              <p className="font-bold text-md">Services offered: {selectedListing.service}</p>
+              <div className="text-md mt-4 gap-2">
+                <p className="font-bold">Biography</p>
+                <p className="text-black">{selectedListing.description}</p>
+              </div>
+              <p className="font-bold text-md">Contact details: {selectedListing.phone}</p>
+              <p className="font-bold text-md">Social media: {selectedListing.social}</p>
+            </div>
+            <CustomButton onClick={closeModal} background="#00CC83" textColor="#FFF" padding="10px" borderRadius="5px">
+              Close
+            </CustomButton>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
