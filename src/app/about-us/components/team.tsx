@@ -10,10 +10,10 @@ const TeamMembers = () => {
             <div className="flex justify-between flex-wrap">
                 {TeamMembersData.map((team, index) => (
                     <div className="md:w-[31%] w-full card-shadow mt-10" key={index}>
-                        <div className="w-full h-[240px] bg-grey card-shadow">
+                        <div className="w-full h-[350px] bg-grey">
                             <img src={team.headshot} alt="headshot" className="w-full h-full object-cover" />
                         </div>
-                        <div className="center flex-col my-6 ">
+                        <div className="center flex-col my-8 ">
                             <p className="font-medium">{team.name}</p>
                             <p className="text-grey">{team.role}</p>
                             <a className="text-sm" href={team.connect} target="_blank">Connect with me</a>

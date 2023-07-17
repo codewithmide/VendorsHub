@@ -15,7 +15,7 @@ const WhyUs = () => {
                     {LevrageVendors.map((vendors, index) => (
                         <div
                             key={index}
-                            className="lg:w-[33.24%] md:w-[49.5%] w-full flex items-start justify-center gap-3 md:pl-10 sm:pl-4 flex-col bg-[#F0F0F0] h-[380px] hover:bg-[#234D9F] hover:text-white duration-300 transition-all custom-card"
+                            className="lg:w-[33.24%] md:w-[49.5%] w-full flex items-start justify-center gap-3 md:px-10 sm:px-4 flex-col bg-[#F0F0F0] h-[380px] hover:bg-[#234D9F] hover:text-white duration-300 transition-all custom-card"
                         >
                             <img src={vendors.icon} alt="icon" height={85} />
                             <h3 className="font-bold text-md">{vendors.name}</h3>
@@ -74,7 +74,7 @@ const WhyUs = () => {
                             key={index}
                             className="lg:w-[33.24%] w-full center gap-3 flex-col bg-[#F0F0F0] h-[300px] custom-card"
                         >
-                            <h3 className="font-bold text-[1.4rem] text-center w-[80%]">{why.heading}</h3>
+                            <h3 className="text-blue text-[1.4rem] text-center w-[80%]">{why.heading}</h3>
                             <p className="text-center w-2/3">{why.text}</p>
                         </div>
                         ))}
@@ -88,7 +88,7 @@ const WhyUs = () => {
                             key={index}
                             className="lg:w-[33.24%] w-full center gap-3 flex-col bg-[#F0F0F0] h-[300px] custom-card"
                         >
-                            <h3 className="font-bold text-[1.4rem] text-center w-[80%]">{why.heading}</h3>
+                            <h3 className="text-blue text-[1.4rem] text-center w-[80%]">{why.heading}</h3>
                             <p className="text-center w-2/3">{why.text}</p>
                         </div>
                         ))}

@@ -2,7 +2,7 @@ export const TeamMembersData = [
     {
         name: 'Aju Josephine',
         role: 'Product Manager',
-        headshot: '',
+        headshot: '/images/josie.jpg',
         connect: '',
     },
     {
@@ -14,7 +14,7 @@ export const TeamMembersData = [
     {
         name: 'Zion Ajibodu',
         role: 'Product Manager',
-        headshot: '',
+        headshot: '/images/zion.png',
         connect: '',
     },
     {
