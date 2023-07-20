@@ -54,7 +54,7 @@ const Coverage: React.FC<CoverageProps> = ({item}) => {
     const { id, title, body, backgroundImg  } = item;
     
     return (
-        <section className={`flex text-white justify-center items-center gap-x-16 mb-12 cursor-default bg-center bg-cover  md:px-12 p-6 md:py-20 flex-col ${id % 2 !== 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`} style={{backgroundImage: ` linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), ${backgroundImg}`}}>
+        <section className={`h-[450px] text-white center gap-x-16 mb-12 cursor-default bg-center bg-cover  md:px-12 p-6 md:py-20 flex-col ${id % 2 !== 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`} style={{backgroundImage: ` linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), ${backgroundImg}`}}>
             <p className="w-[100%] md:w-[40%] md:text-[2.2rem] text-[1.6rem]">
                 {title}
             </p>
