@@ -150,25 +150,29 @@ const Categories = () => {
         </div>
       </div>
       {selectedListing && (
-        <div className="modal fixed top-0 left-0 w-full h-full center">
-          <div className="w-full md:w-[70%] h-[90%] bg-white center flex-col md:px-[40px] px-[20px] pb-10 rounded-[5px] overflow-y-scroll">
-            <div className="flex items-end justify-end w-full md:mt-[rem] sm:mt-[15rem]">
-              <img src="/svg/cancel.svg" alt="cancel button" width="30px" className="cursor-pointer" onClick={closeModal} />
-            </div>
-            <h3 className="md:text-[2rem] text-[1.3rem] text-blue font-bold">{selectedListing?.name}</h3>
-            <p className="font-bold">{selectedListing?.location}</p>
-            <img src={selectedListing?.image} alt="vendors image" className="my-10 h-[200px]" />
-            <div className="flex flex-col gap-4">
-              <p className="font-bold">Business Owner: {selectedListing?.fullname}</p>
-              <p className="font-bold">Year of experience: {selectedListing?.experience}</p>
-              <p className="font-bold">Services offered: {selectedListing?.service}</p>
-              <div className="text-md mt-4 gap-2">
-                <p className="font-bold">Biography</p>
-                <p className="text-black text-sm md:text-[1rem]">{selectedListing?.description}</p>
+        <div className="modal fixed py-[50px] top-0 left-0 h-[100%] w-[100%]">
+          {/* <div className="w-full md:w-[70%] h-[90%] bg-white center flex-col md:px-[40px] px-[20px] pb-10 rounded-[5px] overflow-y-scroll"> */}
+            <div className="bg-white py-8 flex-col m-auto w-[90vw] md:w-[50vw] h-[80vh] md:h-[80vh] px-4 md:px-6 rounded-md overflow-y-auto">
+              <div className="flex items-end justify-end w-full">
+                <img src="/svg/cancel.svg" alt="cancel button" width="30px" className="cursor-pointer" onClick={closeModal} />
               </div>
-              <p className="font-bold text-sm">Contact details: {selectedListing?.phone}</p>
-              <p className="font-bold text-sm">Social media: {selectedListing?.social}</p>
-            </div>
+              <div className="flex flex-col items-center">
+              <h3 className="md:text-[2rem] text-[1.3rem] text-blue font-bold">{selectedListing?.name}</h3>
+              <p className="font-bold">{selectedListing?.location}</p>
+              <img src={selectedListing?.image} alt="vendors image" className="my-10 h-[200px]" />
+              </div>
+              <div className="flex flex-col gap-4">
+                <p className="font-bold">Business Owner: {selectedListing?.fullname}</p>
+                <p className="font-bold">Year of experience: {selectedListing?.experience}</p>
+                <p className="font-bold">Services offered: {selectedListing?.service}</p>
+                <div className="text-md mt-4 gap-2">
+                  <p className="font-bold">Biography</p>
+                  <p className="text-black text-sm md:text-[1rem]">{selectedListing?.description}</p>
+                </div>
+                <p className="font-bold text-sm">Contact details: {selectedListing?.phone}</p>
+                <p className="font-bold text-sm">Social media: {selectedListing?.social}</p>
+              </div>
+          {/* </div> */}
           </div>
         </div>
       )}
