@@ -12,32 +12,10 @@ const Categories = () => {
   const [startIndex, setStartIndex] = useState(0);
   const [filteredVendorsListings, setFilteredVendorsListings] = useState(vendorsListings);
   const [selectedListing, setSelectedListing] = useState<any>(null);
-  const [searchText, setSearchText] = useState('');
-
-  useEffect(() => {
-    handleSearch(searchText);
-  }, [searchText]);
-
-  const handleSearch = (searchText: string) => {
-    setSearchText(searchText); // Update the search text state
-
-    if (searchText.trim() === '') {
-      // Empty search text, show all categories
-      setFilteredVendorsListings(vendorsListings);
-    } else {
-      // Non-empty search text, filter the listings
-      const filteredListings = vendorsListings.filter(
-        (listing) =>
-          listing.name.toLowerCase().includes(searchText.toLowerCase()) ||
-          listing.job.toLowerCase().includes(searchText.toLowerCase())
-      );
-      setFilteredVendorsListings(filteredListings);
-    }
-  };
 
   const updateVisibleCategories = () => {
     const screenWidth = window.innerWidth;
-    let newVisibleCategories = 6;
+    let newVisibleCategories = 6; // Default number of visible categories
 
     if (screenWidth < 480) {
       newVisibleCategories = 1;
@@ -84,7 +62,22 @@ const Categories = () => {
   const closeModal = () => {
     setSelectedListing(null);
   };
-  
+
+  const handleSearch = (searchText: string) => {
+    if (searchText.trim() === '') {
+      // Empty search text, show all categories
+      setFilteredVendorsListings(vendorsListings);
+    } else {
+      // Non-empty search text, filter the listings
+      const filteredListings = vendorsListings.filter(
+        (listing) =>
+          listing.name.toLowerCase().includes(searchText.toLowerCase()) ||
+          listing.job.toLowerCase().includes(searchText.toLowerCase())
+      );
+      setFilteredVendorsListings(filteredListings);
+    }
+  };
+
   return (
     <div className="w-full mt-8 mb-6">
       <h2 className="md:text-lg text-[1.3rem] w-[90%] mx-auto">Categories</h2>
@@ -133,14 +126,14 @@ const Categories = () => {
           {filteredVendorsListings.length > 0 ? (
             filteredVendorsListings.map((listing, index) => (
               <div key={index} className="lg:w-[31.5%] md:w-[48%] w-full mb-4 card-shadow">
-              <div className="w-full h-[285px]">
-                <Image src={listing.image} alt="image" width={393} height={282} />
-              </div>
-              <div className="flex flex-col my-3 p-3">
-                <h3 className="text-[1.3rem] text-blue font-bold">{listing.name}</h3>
-                <p className="text-[.85rem] my-4 text-black h-[80px]">{listing.description}</p>
-              </div>
-              <CustomButton
+                <div className="w-full">
+                  <img src={listing.image} alt="image" />
+                </div>
+                <div className="flex flex-col px-3 my-6">
+                  <h3 className="text-[1.3rem] text-blue font-bold">{listing.name}</h3>
+                  <p className="text-sm my-4 text-black h-[100px]">{listing.description}</p>
+                </div>
+                <CustomButton 
                   onClick={() => handleHireClick(listing)}
                   background="#00CC83"
                   textColor="#FFF"
@@ -149,7 +142,7 @@ const Categories = () => {
                 >
                   Hire
                 </CustomButton>
-            </div>
+              </div>
             ))
           ) : (
             <h2 className="text-center text-black text-lg mb-10">Vendor does not exist.</h2>
@@ -158,15 +151,14 @@ const Categories = () => {
       </div>
       {selectedListing && (
         <div className="modal fixed py-[50px] top-0 left-0 h-[100%] w-[100%]">
-          {/* <div className="w-full md:w-[70%] h-[90%] bg-white center flex-col md:px-[40px] px-[20px] pb-10 rounded-[5px] overflow-y-scroll"> */}
-            <div className="bg-white py-8 flex-col m-auto w-[90vw] md:w-[50vw] h-[80vh] md:h-[80vh] px-4 md:px-6 rounded-md overflow-y-auto">
+          <div className="bg-white py-8 flex-col m-auto w-[90vw] md:w-[50vw] h-[80vh] md:h-[80vh] px-4 md:px-6 rounded-md overflow-y-auto">
               <div className="flex items-end justify-end w-full">
                 <img src="/svg/cancel.svg" alt="cancel button" width="30px" className="cursor-pointer" onClick={closeModal} />
               </div>
               <div className="flex flex-col items-center">
-              <h3 className="md:text-[2rem] text-[1.3rem] text-blue font-bold">{selectedListing?.name}</h3>
-              <p className="font-bold">{selectedListing?.location}</p>
-              <img src={selectedListing?.image} alt="vendors image" className="my-10 h-[200px]" />
+                <h3 className="md:text-[2rem] text-[1.3rem] text-blue font-bold">{selectedListing?.name}</h3>
+                <p className="font-bold">{selectedListing?.location}</p>
+                <img src={selectedListing?.image} alt="vendors image" className="my-10 h-[200px]" />
               </div>
               <div className="flex flex-col gap-4">
                 <p className="font-bold">Business Owner: {selectedListing?.fullname}</p>
@@ -179,7 +171,6 @@ const Categories = () => {
                 <p className="font-bold text-sm">Contact details: {selectedListing?.phone}</p>
                 <p className="font-bold text-sm">Social media: {selectedListing?.social}</p>
               </div>
-          {/* </div> */}
           </div>
         </div>
       )}
