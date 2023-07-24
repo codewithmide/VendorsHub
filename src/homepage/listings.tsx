@@ -10,9 +10,9 @@ const Listings = () => {
     return (
       <div className='w-full my-6 flex-col flex items-center md:justify-start justify-center'>
         <h2 className='font-bold text-black my-8 text-md md:text-left w-[90%] text-center'>A Trusted Vendors Listing Platform </h2>
-        <div className='w-[90%] gap-3 flex-wrap flex'>
+        <div className='w-[90%] flex-wrap md:flex-no-wrap flex items-center justify-between'>
             {homeListings.map((listing, index) => (
-            <div key={index} className="lg:w-[31.5%] md:w-[48%] w-full mb-4 card-shadow">
+            <div key={index} className="lg:w-[32.5%] md:w-[48%] w-full mb-4 card-shadow">
               <div className="w-full h-[285px]">
                 <Image src={listing.image} alt="image" width={393} height={282} />
               </div>

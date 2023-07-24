@@ -5,7 +5,7 @@ import { StakeholdersData } from "../util/stakeholders";
 
 const StakeHolders = () => {
     return (
-        <div className="flex flex-col lg:w-[80%] w-[90%] mt-20">
+        <div className="flex flex-col lg:w-[80%] w-[90%] my-20">
             <h2 className="text-lg text-center w-full">Stakeholders</h2>
             <div className="flex justify-between flex-wrap">
                 {StakeholdersData.map((sth, index) => (

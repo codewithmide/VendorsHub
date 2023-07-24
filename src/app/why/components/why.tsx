@@ -4,10 +4,10 @@ const Why = () => {
     return (
         <section className="center md:mt-20 mt-10">
             <div className="flex flex-col lg:w-[80%] w-[90%]">
-                <h2 className="md:text-[2rem] text-[1.3rem] mb-10">Why</h2>
+                <h2 className="md:hidden text-[1.3rem] mb-10">Why</h2>
                 {/* DESKTOP DISPLAY */}
                 <div className="between md:flex sm:hidden">
-                    <div className="w-[33%]"></div>
+                    <div className="w-[33%] font-bold text-[2rem] pl-4">Why</div>
                     <div className="w-[33%] font-bold text-[1.4rem] pl-10">
                         VendorsHub
                     </div>
@@ -59,9 +59,9 @@ const Why = () => {
                     <div className="flex gap-12 flex-col font-medium w-full">
                         <div className="flex items-center gap-4">
                             <div className="rounded-full border border-blue md:text-lg text-md font-bold text-black md:w-[70px] md:h-[70px] w-[50px] h-[50px] center">1</div>
-                            <div className="md:text-md w-[80%] flex flex-col">
+                            <div className="md:text-md w-[80%] flex flex-col gap-3">
                                 <h2 className="">Time to find a vendor</h2>
-                                <div className="between pt-6">
+                                <div className="between">
                                     <p className="font-bold text-sm">VendorsHub</p>
                                     <p className="font-bold text-grey text-sm">Less than 2 minutes</p>
                                 </div>
@@ -73,9 +73,9 @@ const Why = () => {
                         </div>
                         <div className="flex items-center gap-4">
                             <div className="rounded-full border border-blue md:text-lg text-md font-bold text-black md:w-[70px] md:h-[70px] w-[50px] h-[50px] center">2</div>
-                            <div className="md:text-md w-[80%] flex flex-col">
+                            <div className="md:text-md w-[80%] flex flex-col gap-3">
                                 <h2>Quality Guaranteed</h2>
-                                <div className="between w-full pt-6">
+                                <div className="between w-full">
                                     <p className="font-bold text-sm">VendorsHub</p>
                                     <p className="font-bold text-grey text-sm">Guaranteed</p>
                                 </div>
@@ -87,9 +87,9 @@ const Why = () => {
                         </div>
                         <div className="flex items-center gap-4">
                             <div className="rounded-full border border-blue md:text-lg text-md font-bold text-black md:w-[70px] md:h-[70px] w-[50px] h-[50px] center">2</div>
-                            <div className="md:text-md w-[80%] flex flex-col">
+                            <div className="md:text-md w-[80%] flex flex-col gap-3">
                                 <h2>Failure rate</h2>
-                                <div className="between w-full pt-6">
+                                <div className="between w-full">
                                     <p className="font-bold text-sm">VendorsHub</p>
                                     <p className="font-bold text-grey text-sm">Very Low</p>
                                 </div>

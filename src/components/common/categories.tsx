@@ -12,10 +12,32 @@ const Categories = () => {
   const [startIndex, setStartIndex] = useState(0);
   const [filteredVendorsListings, setFilteredVendorsListings] = useState(vendorsListings);
   const [selectedListing, setSelectedListing] = useState<any>(null);
+  const [searchText, setSearchText] = useState('');
+
+  useEffect(() => {
+    handleSearch(searchText);
+  }, [searchText]);
+
+  const handleSearch = (searchText: string) => {
+    setSearchText(searchText); // Update the search text state
+
+    if (searchText.trim() === '') {
+      // Empty search text, show all categories
+      setFilteredVendorsListings(vendorsListings);
+    } else {
+      // Non-empty search text, filter the listings
+      const filteredListings = vendorsListings.filter(
+        (listing) =>
+          listing.name.toLowerCase().includes(searchText.toLowerCase()) ||
+          listing.job.toLowerCase().includes(searchText.toLowerCase())
+      );
+      setFilteredVendorsListings(filteredListings);
+    }
+  };
 
   const updateVisibleCategories = () => {
     const screenWidth = window.innerWidth;
-    let newVisibleCategories = 6; // Default number of visible categories
+    let newVisibleCategories = 6;
 
     if (screenWidth < 480) {
       newVisibleCategories = 1;
@@ -62,22 +84,7 @@ const Categories = () => {
   const closeModal = () => {
     setSelectedListing(null);
   };
-
-  const handleSearch = (searchText: string) => {
-    if (searchText.trim() === '') {
-      // Empty search text, show all categories
-      setFilteredVendorsListings(vendorsListings);
-    } else {
-      // Non-empty search text, filter the listings
-      const filteredListings = vendorsListings.filter(
-        (listing) =>
-          listing.name.toLowerCase().includes(searchText.toLowerCase()) ||
-          listing.job.toLowerCase().includes(searchText.toLowerCase())
-      );
-      setFilteredVendorsListings(filteredListings);
-    }
-  };
-
+  
   return (
     <div className="w-full mt-8 mb-6">
       <h2 className="md:text-lg text-[1.3rem] w-[90%] mx-auto">Categories</h2>
@@ -126,14 +133,14 @@ const Categories = () => {
           {filteredVendorsListings.length > 0 ? (
             filteredVendorsListings.map((listing, index) => (
               <div key={index} className="lg:w-[31.5%] md:w-[48%] w-full mb-4 card-shadow">
-                <div className="w-full">
-                  <img src={listing.image} alt="image" />
-                </div>
-                <div className="flex flex-col px-3 my-6">
-                  <h3 className="text-[1.3rem] text-blue font-bold">{listing.name}</h3>
-                  <p className="text-sm my-4 text-black h-[100px]">{listing.description}</p>
-                </div>
-                <CustomButton
+              <div className="w-full h-[285px]">
+                <Image src={listing.image} alt="image" width={393} height={282} />
+              </div>
+              <div className="flex flex-col my-3 p-3">
+                <h3 className="text-[1.3rem] text-blue font-bold">{listing.name}</h3>
+                <p className="text-[.85rem] my-4 text-black h-[80px]">{listing.description}</p>
+              </div>
+              <CustomButton
                   onClick={() => handleHireClick(listing)}
                   background="#00CC83"
                   textColor="#FFF"
@@ -142,7 +149,7 @@ const Categories = () => {
                 >
                   Hire
                 </CustomButton>
-              </div>
+            </div>
             ))
           ) : (
             <h2 className="text-center text-black text-lg mb-10">Vendor does not exist.</h2>
