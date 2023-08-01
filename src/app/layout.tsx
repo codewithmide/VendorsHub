@@ -3,6 +3,7 @@ import '../styles/fonts.css';
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
+  metadataBase: new URL('https://vendorshub.com.ng'),
   title: 'Vendors Hub',
   description: 'Resolve issues around hiring vendors for your event.',
   openGraph: {
