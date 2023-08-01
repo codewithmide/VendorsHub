@@ -4,11 +4,27 @@ import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   metadataBase: new URL('https://vendorshub.com.ng'),
-  title: 'Vendors Hub',
-  description: 'Resolve issues around hiring vendors for your event.',
   openGraph: {
-    images: '/images/opengraph-image.png'
-  }
+    title: 'Vendors Hub',
+    description: 'Resolve issues around hiring vendors for your event.',
+    url: 'https://vendorshub.com.ng',
+    siteName: 'Vendors Hub',
+    images: [
+      {
+        url: '/images/opengraph-image.png',
+        width: 800,
+        height: 600,
+      },
+      {
+        url: 'https://nextjs.org/og-alt.png',
+        width: 1800,
+        height: 1600,
+        alt: 'Vendors Hub',
+      },
+    ],
+    locale: 'en_NG',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({
