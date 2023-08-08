@@ -32,7 +32,7 @@ const ListingNavbar = () => {
                 </div>
             </div>
             {openMenu && (
-                <div className='w-screen bg-white text-black absolute top-0 right-0 left-0 center py-6'>
+                <div className=' md:hidden w-screen bg-white text-black absolute top-0 right-0 left-0 center py-6'>
                     <div className='w-[90%] flex-col flex'>
                         <div className='flex items-end justify-end' onClick={handleCloseMenu}><FaTimes className='text-[1.5rem]' /></div>
                         <div className="gap-8 mt-8 flex flex-col text-[1rem]">
