@@ -8,7 +8,7 @@ export const TeamMembersData = [
     {
         name: 'Damola Oladipo',
         role: 'Product Manager',
-        headshot: '',
+        headshot: '/images/damola.jpg',
         connect: '',
     },
     {
