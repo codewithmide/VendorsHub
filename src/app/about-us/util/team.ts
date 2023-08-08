@@ -20,7 +20,7 @@ export const TeamMembersData = [
     {
         name: 'Makinde Ridwan',
         role: 'Front-end Developer',
-        headshot: '',
+        headshot: '/images/Ridwan.svg',
         connect: '',
     },
     {
