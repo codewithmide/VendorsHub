@@ -32,7 +32,7 @@ export const TeamMembersData = [
     {
         name: 'Eddie Irianele',
         role: 'Product Designer',
-        headshot: '',
+        headshot: '/images/eddie.jpeg',
         connect: '',
     },
     {
