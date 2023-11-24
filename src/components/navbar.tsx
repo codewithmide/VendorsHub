@@ -23,9 +23,8 @@ const Navbar = () => {
                 <Logo />
                 <div className="gap-8 md:flex items-center justify-center sm:hidden text-[.9rem]">
                     <Link href='/vendorsListings'>Categories</Link>
-                    <Link href='/service'>Services</Link>            
-                    <Link href='/about-us'>About Us</Link>            
-                    <Link href='/why'>Why</Link>              
+                    <Link href='/service'>Services</Link> 
+                    <Link href=''><button className='bg-yellow text-black text-normal font-bold px-8 py-2 rounded cursor-pointer w-72 h-[66px]'>Register</button></Link>
                 </div>
                 <div className='md:hidden' onClick={handleOpenMenu}>
                     <img src="/svg/menu.svg" alt="menu" width={27} />
@@ -37,9 +36,7 @@ const Navbar = () => {
                         <div className='flex items-end justify-end' onClick={handleCloseMenu}><FaTimes className='text-[1.5rem]' /></div>
                         <div className="gap-8 mt-8 flex flex-col text-[1rem]">
                             <Link href='/vendorsListings'>Categories</Link>
-                            <Link href='/service'>Services</Link>            
-                            <Link href='/about-us'>About Us</Link>            
-                            <Link href='/why'>Why</Link>            
+                            <Link href='/service'>Services</Link> 
                         </div>
                     </div>
                 </div>

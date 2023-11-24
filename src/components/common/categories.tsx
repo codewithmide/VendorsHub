@@ -87,7 +87,7 @@ const Categories = () => {
   
   return (
     <div className="w-full mt-8 mb-6">
-      <h2 className="md:text-lg text-[1.3rem] w-[90%] mx-auto">Categories</h2>
+      {/* <h2 className="md:text-lg text-[1.3rem] w-[90%] mx-auto">Categories</h2> */}
       <div className="w-[90%] mx-auto">
         <div className="flex items-center justify-between">
           <div onClick={showPreviousCategories}>
@@ -101,11 +101,18 @@ const Categories = () => {
           </div>
           <div className="center gap-6 overflow-hidden w-[84%]">
             {categories.slice(startIndex, startIndex + visibleCategories).map((category, index) => (
-              <div
-                key={index}
-                className="w-[160px] h-[90px] flex items-center justify-center category my-6 hover:bg-blue hover:text-white"
-              >
-                {category.job}
+              <div>
+                <div
+                  key={index}
+                  className="w-[160px] h-[90px] flex items-center justify-center category my-6 hover:bg-blue hover:text-white rounded-[50%]"
+                  style={{
+                    background: `url(@/public/images/${category.img}) center/cover no-repeat`,
+                    width: "50px",
+                    height: "50px",
+                  }}
+                >
+                </div>
+                <p>{category.job}</p>            
               </div>
             ))}
           </div>

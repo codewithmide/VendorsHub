@@ -17,7 +17,7 @@ module.exports = {
       xxxl: '5rem'
     },
     colors: {
-      primary: "#FFFFFF",
+      primary: "#383838",
       secondary: "#00CC83",
       white: "#FFFFFF",
       black: '#1E1E1E',
@@ -33,6 +33,7 @@ module.exports = {
       fav: '#9BFFF9',
       rating: '#FFF59E',
       error: '#DA0060',
+      yellow: '#F5BD02',
     },
     extend: {
       screens: {
