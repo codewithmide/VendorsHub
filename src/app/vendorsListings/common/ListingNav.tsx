@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from "next/link";
 import Logo from '@/components/common/logo';
 import { FaTimes } from 'react-icons/fa';
-
+import Image from "next/image";
 
 const ListingNavbar = () => {
     const [openMenu, setOpenMenu ] = useState(false);
@@ -28,7 +28,7 @@ const ListingNavbar = () => {
                     <Link href='/why'>Why</Link>             
                 </div>
                 <div className='md:hidden' onClick={handleOpenMenu}>
-                    <img src="/svg/menu.svg" alt="menu" width={27} />
+                    <Image src="/svg/menu.svg" alt="menu" width={27} height={27} />
                 </div>
             </div>
             {openMenu && (
