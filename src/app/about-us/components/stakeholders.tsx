@@ -11,12 +11,19 @@ const StakeHolders = () => {
                 {StakeholdersData.map((sth, index) => (
                     <div className="md:w-[31%] w-full card-shadow mt-10" key={index}>
                         <div className="w-full h-[240px] bg-grey card-shadow">
-                            <img src={sth.headshot} alt="headshot" className="w-full h-full object-cover" />
+                            <Image
+                                src={sth.headshot}
+                                alt={`${sth.name}'s headshot`}
+                                layout="fill"
+                                objectFit="cover"
+                            />
                         </div>
-                        <div className="center flex-col my-6 ">
+                        <div className="center flex-col my-6">
                             <p className="font-medium">{sth.name}</p>
                             <p className="text-grey">{sth.role}</p>
-                            <a className="text-sm" href={sth.connect} target="_blank">Connect with me</a>
+                            <a className="text-sm" href={sth.connect} target="_blank" rel="noopener noreferrer">
+                                Connect with me
+                            </a>
                         </div>
                     </div>
                 ))}

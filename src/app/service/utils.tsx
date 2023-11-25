@@ -2,27 +2,28 @@ export const serviceInfo = `VendorsHub is a platform for vendors to showcase the
 
 export const coverageData = [
     {
-        id: 1,
-        title: 'Baking',
-        body: `"Baker" is a term commonly used to refer to an individual who specializes in baking and the production of various baked goods. A baker is skilled in the art of combining and preparing ingredients, such as flour, sugar, eggs, and yeast, to create a wide range of products like bread, pastries, cakes, cookies, and more. They often follow specific recipes and techniques to ensure the desired texture, flavor, and appearance of the finished products. Bakers may work in commercial bakeries, pastry shops, restaurants, hotels, or even operate their own independent businesses. `,
-        backgroundImg: 'url(./images/cake.png)'
+      id: 1,
+      title: 'Baking',
+      body: "Bakers are individuals or businesses that prepare and bake bread, pastries, and other baked goods.",
+      backgroundImg: '/images/Bakers.png',   
     },
     {
-        id: 2,
-        title: 'Photographers',
-        body: `The practice of photography involves more than just clicking a button. It requires a good eye for composition, an understanding of lighting and exposure, and the ability to control the technical aspects of the camera. Post-processing, using software like Adobe Photoshop or Lightroom, is also a crucial part of modern photography, allowing photographers to enhance and refine their images.`,
-        backgroundImg: 'url(./images/camera.png)'
+      id: 2,
+      title: 'Event Decorator',
+      body: "Event planners are professionals who organize and coordinate various aspects of events, such as parties, conferences, weddings, and corporate functions.",
+      backgroundImg: '/images/Event-decorator.png', 
     },
     {
-        id: 3,
-        title: 'Event Decorator',
-        body: `Their role involves collaborating with clients and event planners to understand the vision and theme of the event. Event decorators use their creative skills and knowledge of design principles to create visually appealing and aesthetically pleasing environments. They consider factors like color schemes, lighting, floral arrangements, furniture, props, and other decorative elements to bring the event space to life. Event decorators are responsible for designing and arranging table settings, drapery, backdrops, centerpieces, and stage setups. `,
-        backgroundImg: 'url(./images/event.png)'
+      id: 3,
+      title: 'Photographers',
+      body: "Photographers are individuals who use cameras and other equipment to capture images of people, places, events, and objects.",
+      backgroundImg: '/images/Photographers.png', 
     },
     {
-        id: 4,
-        title: 'Beauticians',
-        body: `Beauticians are trained in a wide range of beauty treatments, which may include facials, skincare routines, makeup application, hair removal, nail care, body treatments, and massages. They possess knowledge of different skincare products, tools, and techniques to address specific concerns and achieve desired results.`,
-        backgroundImg: 'url(./images/hair.png)'
+      id: 4,
+      title: 'Beauticians',
+      body: `Beauticians are trained in a wide range of beauty treatments, which may include facials, skincare routines, makeup application, hair removal, nail care, body treatments, and massages. They possess knowledge of different skincare products, tools, and techniques to address specific concerns and achieve desired results.`,
+      backgroundImg: '/images/hair.png', 
     },
-]
+  ];
+  

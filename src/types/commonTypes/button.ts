@@ -3,6 +3,8 @@ export interface CustomButtonTypes {
     background?: string;
     onClick: React.MouseEventHandler<HTMLButtonElement>;
     textColor?: string;
+    width?: string;
+    height?: string;
     padding?: string;
     borderRadius?: string;
     cursor?: string;
